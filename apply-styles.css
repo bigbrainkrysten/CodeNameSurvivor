@@ -90,6 +90,19 @@ header a {
     margin-left: -50px;
 }
 
+#Host {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 30px;
+}
+
+#Host img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+}
+
 #you::before {
     padding-top: 50px;
 }
@@ -202,7 +215,22 @@ header a {
     margin: 40px 0 80px 0;
 }
 
+footer{
+    color: #222222;
+    text-align: center;
+    padding: 20px 0;
+    font-family: "Times New Roman", Times, Sans-serif;
+    font-size: 14px;
+}
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#hero img {
+  animation: fadeIn 1s ease-in-out;
+}
 
 
 
