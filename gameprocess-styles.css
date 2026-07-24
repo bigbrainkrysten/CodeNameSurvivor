@@ -1,0 +1,281 @@
+/* ---------- GENERAL ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f5f2e9;
+    color: #222;
+    line-height: 1.7;
+}
+
+/* ---------- HEADER ---------- */
+
+.header {
+    background: #0b3d2e;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+}
+
+.header__title {
+    font-family: "Oswald", sans-serif;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.header__nav {
+    display: flex;
+    gap: 30px;
+}
+
+.header__nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: color .3s ease, transform .3s ease;
+}
+
+.header__nav a:hover,
+.header__nav .active {
+    color: #f4b942;
+    transform: translateY(-2px);
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+    height: 420px;
+
+    background: linear-gradient(135deg, #0b3d2e 0%, #145540 50%, #2d6a4f 100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: heroFade 1.2s ease;
+}
+
+.hero__overlay {
+    text-align: center;
+    color: white;
+    padding: 30px;
+    max-width: 700px;
+}
+
+.hero__title {
+    font-family: "Oswald", sans-serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero__text {
+    font-size: 1.3rem;
+}
+
+/* ---------- MAIN ---------- */
+
+.process {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 60px auto;
+}
+
+.process__intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.process__intro h2 {
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 20px;
+    color: #0b3d2e;
+}
+
+.process__intro p {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* ---------- CARDS ---------- */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    justify-content: center;
+
+    margin-bottom: 70px;
+}
+
+.card {
+    background: white;
+
+    width: 320px;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 15px 30px rgba(0,0,0,.25);
+}
+
+.card h2 {
+    color: #0b3d2e;
+    margin-bottom: 15px;
+
+    font-family: "Oswald", sans-serif;
+}
+
+/* ---------- TIPS ---------- */
+
+.tips {
+    text-align: center;
+}
+
+.tips h2 {
+    margin-bottom: 40px;
+
+    color: #0b3d2e;
+
+    font-family: "Oswald", sans-serif;
+}
+
+.tips__container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+.tip {
+    background: #0b3d2e;
+
+    color: white;
+
+    width: 280px;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    transition:
+        background .3s ease,
+        transform .3s ease;
+}
+
+.tip:hover {
+    background: #145540;
+
+    transform: scale(1.05);
+}
+
+.tip h3 {
+    margin-bottom: 15px;
+
+    color: #f4b942;
+
+    font-family: "Oswald", sans-serif;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    margin-top: 80px;
+
+    background: #0b3d2e;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+/* ---------- ANIMATION ---------- */
+
+@keyframes heroFade {
+
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        gap: 20px;
+
+        padding: 25px;
+    }
+
+    .header__nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        height: 300px;
+    }
+
+    .hero__title {
+        font-size: 2rem;
+    }
+
+    .hero__text {
+        font-size: 1rem;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 95%;
+    }
+
+    .tips__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tip {
+        width: 95%;
+    }
+
+}
