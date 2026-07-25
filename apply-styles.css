@@ -274,8 +274,368 @@ footer{
   animation: fadeIn 1s ease-in-out;
 }
 
+.cast-hero {
+    justify-content: center;
+    gap: 10px;
+}
 
+.cast-hero #hero-image {
+    width: auto;
+    justify-content: center;
+}
 
+.cast-hero #hero-image img.season50-logo {
+    width: 300px !important;
+    height: auto;
+    padding-top: 0;
+    margin: 0;
+}
+
+.top-winners,
+.fan-favorites {
+    max-width: 1400px;
+    margin: 0 auto 4rem;
+    padding: 2rem 2rem 0;
+}
+
+.top-winners h2,
+.fan-favorites h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.winners__container,
+.fan-favorites__container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1.5rem;
+}
+
+.winner-card,
+.fan-favorite-card {
+    flex: 1;
+    max-width: 220px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.winner-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.winner-card h3,
+.fan-favorite-card h3 {
+    margin: 0;
+    padding: 0.75rem 0.5rem 0.25rem;
+    font-size: 1rem;
+}
+
+.winner-card p,
+.fan-favorite-card p {
+    margin: 0;
+    padding: 0.25rem 0.5rem 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.winner-card--first {
+    border: 6px solid #D4AF37;
+}
+
+.winner-card:nth-child(2) {
+    border: 6px solid #C0C0C0;
+}
+
+.winner-card:nth-child(3) {
+    border: 6px solid #CD7F32;
+}
+
+.winners__container .winner-card--first {
+    max-width: 250px;
+}
+
+.winners__container .winner-card--first img {
+    height: 250px;
+}
+
+.fan-favorites {
+    padding-top: 2rem;
+}
+
+.fan-favorite-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.fan-favorite-card--first {
+    border: 6px solid #D4AF37;
+}
+
+.participants-page {
+    background-color: #f4f1e8;
+    color: #222222;
+
+    --cila-color: #FF7F00;
+    --kalo-color: #008080;
+    --vatu-color: #D20096;
+}
+
+.participants-page .participants {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.participants-page .participants__intro {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.participants-page .tribes {
+    margin-bottom: 4rem;
+}
+
+.participants-page .tribes__container {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.participants-page .tribe {
+    flex: 1;
+    min-width: 0;
+    border-radius: 20px;
+    padding: 0.5rem; 
+}
+
+.participants-page .tribe__name {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.participants-page .tribe--cila .tribe__name {
+    background-color: var(--cila-color);
+    color: white;
+    padding: 0.75rem;
+    border-radius: 8px;
+}
+
+.participants-page .tribe--cila .player-card__image {
+    border: 6px solid var(--cila-color);
+    box-sizing: border-box;
+}
+
+.participants-page .tribe--kalo .tribe__name {
+    background-color: var(--kalo-color);
+    color: white;
+    padding: 0.75rem;
+    border-radius: 8px;
+}
+
+.participants-page .tribe--kalo .player-card__image {
+    border: 6px solid var(--kalo-color);
+    box-sizing: border-box;
+}
+
+.participants-page .tribe--vatu .tribe__name {
+    background-color: var(--vatu-color);
+    color: white;
+    padding: 0.75rem;
+    border-radius: 8px;
+}
+
+.participants-page .tribe--vatu .player-card__image {
+    border: 6px solid var(--vatu-color);
+    box-sizing: border-box;
+}
+
+.participants-page .player-card {
+    position: relative;
+    background-color: white;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.participants-page .player-card__image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.participants-page .player-card__name {
+    margin: 0;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+.participants-page .player-card__details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.participants-page .player-card:hover .player-card__details {
+    opacity: 1;
+}
+
+.participants-page .player-card__details h4 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.participants-page .player-card__details p {
+    margin: 0.4rem 0;
+    font-size: 0.9rem;
+}
+
+/* Tablet */
+
+@media screen and (max-width: 900px) {
+
+    .participants-page .participants {
+        padding: 3rem 1rem;
+    }
+
+    .participants-page .tribes__container {
+        gap: 1rem;
+    }
+
+    .participants-page .player-card__image {
+        height: 220px;
+    }
+
+    .participants-page .player-card__details {
+        padding: 1rem;
+    }
+
+    .participants-page .player-card__details p {
+        font-size: 0.75rem;
+    }
+
+    .winner-card,
+    .fan-favorite-card {
+        width: 100%;
+        max-width: 150px;
+    }
+
+    .winner-card img,
+    .fan-favorite-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .participants-page #header-logo img {
+        max-width: 180px;
+        height: auto;
+    }
+
+    .participants-page .cast-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .participants-page .cast-hero #hero-image img.season50-logo {
+        width: 250px !important;
+        max-width: 80%;
+        height: auto;
+    }
+
+}
+
+/* Mobile */
+
+@media screen and (max-width: 600px) {
+
+    .participants-page .participants {
+        padding: 2rem 1.5rem;
+    }
+
+    .participants-page .tribes__container {
+        flex-direction: column;
+    }
+
+    .participants-page .tribe {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .participants-page .player-card__image {
+        height: 300px;
+    }
+
+    .winners__container,
+    .fan-favorites__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .winner-card,
+    .fan-favorite-card,
+    .winners__container .winner-card--first,
+    .fan-favorite-card--first {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .winner-card img,
+    .fan-favorite-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .participants-page .cast-hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .participants-page #hero-text {
+        order: 1;
+    }
+
+    .participants-page #hero-image {
+        order: 2;
+        width: 100%;
+    }
+
+    .participants-page #hero-image img.season50-logo {
+        width: 200px !important;
+        max-width: 80%;
+        height: auto;
+    }
+
+}
 
 /*
 background color sand / off white: #F4F0E6;
